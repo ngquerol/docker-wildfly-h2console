@@ -1,7 +1,10 @@
 FROM jboss/wildfly:10.1.0.Final
 MAINTAINER Nicolas G. Querol <nicolas.gquerol@gmail.com>
 
-RUN /opt/jboss/wildfly/bin/add-user.sh admin admin
+ARG admin_username=admin
+ARG admin_password=admin
+
+RUN /opt/jboss/wildfly/bin/add-user.sh $admin_username $admin_password
 
 ADD h2console.war /opt/jboss/wildfly/standalone/deployments
 
