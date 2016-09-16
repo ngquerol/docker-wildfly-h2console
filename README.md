@@ -2,6 +2,10 @@
 
 Simple Docker image based on the Wildfly Application Server, with an included h2 console.
 
+Cuurently there is two branches available, respectively matching latest Wildfly 10.x & 8.x stable releases.
+
+Automated builds are available [here](https://hub.docker.com/r/ngquerol/wildfly-h2console/).
+
 # Running
 
 - For example: `docker run -p 8080:8080 -p 9990:9990 ngquerol/wildfly-h2console`
