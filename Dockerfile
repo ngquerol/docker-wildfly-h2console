@@ -1,7 +1,7 @@
-FROM jboss/wildfly:8.2.1.Final
+FROM jboss/wildfly:10.1.0.Final
 MAINTAINER Nicolas G. Querol <nicolas.gquerol@gmail.com>
 
-RUN /opt/jboss/wildfly/bin/add-user.sh admin admin --silent
+RUN /opt/jboss/wildfly/bin/add-user.sh admin admin
 
 ADD h2console.war /opt/jboss/wildfly/standalone/deployments
 
