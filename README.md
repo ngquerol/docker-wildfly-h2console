@@ -10,12 +10,11 @@ Automated builds are available [here](https://hub.docker.com/r/ngquerol/wildfly-
 
 For example: 
 
-`docker run -p 8080:8080 -p 9990:9990 ngquerol/wildfly-h2console`
+`docker run -p 8787:8787 -p 8080:8080 -p 9990:9990 ngquerol/wildfly-h2console`
 
-Then go to localhost:8080localhost:9990 to check if everything works. You can
-obviously specify a tag or other port mappings.
+Then go to either `localhost:8080` or `localhost:9990` to check if everything works. You can obviously specify a tag or other port mappings.
 
-The default administrator is `admin`, with its password `admin`
+The default administrator is `admin`, with the password `admin`. Remote debugging happens on port `8787` by default.
 
 # Building
 
@@ -30,4 +29,4 @@ Or simply do, e.g. for Wildfly 10.x:
 You can also provide build-time arguments to specify another username and/or
 password for the default administrator:
 
-`docker build . -t ngquerol/wildfly-h2console --build-arg admin_username=test --build-arg admin_password=test`
+`docker build . -t ngquerol/wildfly-h2console --build-arg debug_port=12345 --build-arg admin_username=test --build-arg admin_password=test`
