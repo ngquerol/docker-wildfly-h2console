@@ -14,7 +14,9 @@ For example:
 
 Then go to either `localhost:8080` or `localhost:9990` to check if everything works. You can obviously specify a tag or other port mappings.
 
-The default administrator is `admin`, with the password `admin`. Remote debugging happens on port `8787` by default.
+The default administrator is `admin`, with the password `admin`. Remote debugging happens on port `8787` by default. 
+
+H2 databases are available via port `9092` by default, as configured in [h2console.war](https://github.com/ngquerol/h2console-wildfly/blob/master/src/main/webapp/WEB-INF/web.xml). If you intend to use them, remember to map a host port to the configured or default port.
 
 # Building
 
