@@ -1,6 +1,6 @@
 # docker-wildfly-h2console
 
-Simple Docker image based on the Wildfly Application Server, with an included h2 console.
+Simple Docker image based on the Wildfly Application Server, with an [included h2 console](https://github.com/ngquerol/h2console-wildfly).
 
 Currently there is two branches available, respectively matching latest Wildfly 10.x & 8.x stable releases.
 
